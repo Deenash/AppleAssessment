@@ -40,9 +40,9 @@ app.post('/', function(req,res){
 	let userDate = new Date(req.body.birthday);
 	userDate.setYear(currYear);
 	
-	let diffInDays = dateDifferenceCalc(Date.parse(userDate), Date.parse(today)) + 1;
+	let diffInDays = dateDifferenceCalc(Date.parse(userDate), Date.parse(today));
 	if(diffInDays < 0) {
-		diffInDays = -dateDifferenceCalc(today, new Date(userDate).setYear('2020')) - 1; 
+		diffInDays = -dateDifferenceCalc(today, new Date(userDate).setYear('2020')); 
 	}
 	
 	console.log('Today\'s Date: ' + today + ';\nUser Entered Date: ' + userDate);
