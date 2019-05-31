@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title><%= first_name %></title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+   </head>
+   <body>
+      <h1>Hello</h1>
+      <p>Please provide the first name and last name</p>
+      <p>
+      <form action="/" method="post">
+      <table>
+         <tbody>
+            <tr>
+               <td>First Name</td>
+               <td><input type="text" name="first_name" label="First Name" required="required"></td>
+            </tr>
+            <tr>
+               <td>Last Name</td>
+               <td><input type="text" name="last_name" label = "Last Name" required="required"></td>
+            </tr>
+            <tr>
+               <td>Birthday Date</td>
+               <input type="date" name="birthday" id="birthday" required="required">
+            </tr>
+            <tr>
+               <td><input type="submit"></td>
+            </tr>
+         </tbody>
+      </table>
+      </form>
+      </p>
+   </body>
+</html>
