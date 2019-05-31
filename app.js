@@ -34,13 +34,13 @@ const dateDifferenceCalc = function(day1, day2) {
 
 
 app.post('/', function(req,res){
-	
 	let today = new Date();
 	let currYear = today.getFullYear();
 	let userDate = new Date(req.body.birthday);
+	userDate = new Date(userDate.setDate(userDate.getDate() + 1));
 	userDate.setYear(currYear);
 	
-	let diffInDays = dateDifferenceCalc(Date.parse(userDate), Date.parse(today));
+	let diffInDays = dateDifferenceCalc(Date.parse(userDate), Date.parse(today)) + 1;
 	if(diffInDays < 0) {
 		diffInDays = -dateDifferenceCalc(today, new Date(userDate).setYear('2020')); 
 	}
