@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -27,12 +26,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-app.get('/users', function(req,res){
-	
-});
-
+// Function to calculate the date difference
 const dateDifferenceCalc = function(day1, day2) {
 	var timeDiff = day1 - day2;
 	return Math.floor(timeDiff / (1000 * 60 * 60 * 24));

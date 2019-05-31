@@ -6,7 +6,7 @@
    </head>
    <body>
       <h1>Hello</h1>
-      <p>Please provide the first name and last name</p>
+      <p>Please provide your first name, last name and your birthday date</p>
       <p>
       <form action="/" method="post">
       <table>
@@ -19,15 +19,13 @@
                <td>Last Name</td>
                <td><input type="text" name="last_name" label = "Last Name" required="required"></td>
             </tr>
-            <tr>
-               <td>Birthday Date</td>
-               <input type="date" name="birthday" id="birthday" required="required">
-            </tr>
-            <tr>
-               <td><input type="submit"></td>
-            </tr>
          </tbody>
       </table>
+      <tr>
+      <p>Birthday Date: 
+         <input type="date" name="birthday" id="birthday" required="required">
+      </p>
+      <p>   <input type="submit"> </p>
       </form>
       </p>
    </body>
